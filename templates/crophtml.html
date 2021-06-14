@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <style>
+body{
+
+    background-image: url('https://images.unsplash.com/photo-1508615070457-7baeba4003ab?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z3JhZGllbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-size: 120%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    
+	
+}
+   
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+        /*-----------------INPUT BOX------------------------*/
+.text-center{
+  
+	color:#fff;	
+	text-transform:uppercase;
+    font-size: 23px;
+    margin: -40px 0 80px 0;
+    display: block;
+    text-align: center;
+}
+.box{
+	position:absolute;
+	left:50%;
+	top:50%;
+    margin-top: 80px;
+    margin-bottom: 20px;
+	transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.89);
+	border-radius:30px;
+	padding: 70px 120px;
+    height: 67%;
+    width:11%;
+}
+.input-container{
+	position:relative;
+    margin-left: -60px;
+	margin-bottom:15px;
+    margin-top: 20px;
+}
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:18px;
+	color:#fff;	
+    pointer-events: none;
+	transition: all 0.5s ease-in-out;
+}
+.input-container input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #e74c3c;	
+}
+
+/*-------------------------------BUTTON-----------------------*/
+.btn{
+	color:#fff;
+	background-color:#e74c3c;
+	outline: none;
+    border: 0;
+	padding:11px 20px;
+	text-transform:uppercase;
+	margin-top:30px;
+    margin-left: -150px;
+	border-radius:8px;
+	cursor:pointer;
+	position:relative;
+}
+.btn2{
+	color:#fff;
+	background-color:#e74c3c;
+	outline: none;
+    border: 0;
+	padding:11px 20px;
+	text-transform:uppercase;
+	margin-top:565px;
+    margin-left: 156px;
+	border-radius:8px;
+	cursor:pointer;
+	position:relative;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+	
+}
+
+/*--------------------------------------HEADER------------------------------*/
+
+.header-basic {
+	background-color: #292c2f;
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+	padding: 20px 40px;
+	height: 80px;
+	box-sizing: border-box;
+}
+
+.header-basic .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* Logo */
+
+.header-basic .header-limiter h1 {
+	float: left;
+	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-basic .header-limiter h1 span {
+	color: #5383d3;
+}
+
+/* The header links */
+
+.header-basic .header-limiter a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-basic .header-limiter nav{
+	font:16px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+}
+
+.header-basic .header-limiter nav a{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #ffffff;
+	font-size: 16px;
+	opacity: 0.9;
+}
+
+.header-basic .header-limiter nav a:hover{
+	opacity: 1;
+}
+
+.header-basic .header-limiter nav a.selected {
+	color: #608bd2;
+	pointer-events: none;
+	opacity: 1;
+}
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+	.header-basic {
+		padding: 20px 0;
+		height: 75px;
+	}
+
+	.header-basic .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header-basic .header-limiter nav {
+		line-height: 1;
+		float:none;
+	}
+
+	.header-basic .header-limiter nav a {
+		font-size: 13px;
+	}
+
+}
+
+body {
+	margin:0;
+	padding:0;
+}
+
+/*------------------------------ CARDS------------------------------------*/
+#part2 {
+    margin-top: 50px;
+    display:flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.text-blue {
+    color: #5e72e4;
+}
+.text-green {
+    color: #2dce89;
+}
+.text-orange {
+    color: #fb6340;
+}
+#part2 .myCard {
+    background-color:blanchedalmond;
+    margin-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 45px;
+    width: 20em;
+    margin: 3em;
+    min-height: 13em;
+    padding: 1em;
+    border: 10px;
+    border-color: black;
+    filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.15));
+    transition: 0.25s;
+}
+#part2 .myCard:hover {
+    transform: translateY(-10%);
+}
+#part2 .myCard .myCard-img {
+    width: 4em;
+}
+#part2 .myCard .myCard-img img {
+    width: 100%;
+}
+#part2 .myCard .myCard-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+#part2 .myCard .myCard-body {
+    opacity: 0.75;
+}
+
+
+
+
+
+/*-------------------------------------------------FOOTER---------------------*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+  font-family: Roboto;
+}
+
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  height: 12vh;
+  margin-top: -10px;
+  position: absolute;
+  text-align: left;
+  font: normal 10px sans-serif;
+  padding: 20px 30px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+
+
+
+
+
+</style>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+
+</head>
+<body>
+    
+    <header class="header-basic">
+
+        <div class="header-limiter">
+    
+            <h1><a href="/home">Crop Prediction System</a></h1>
+    
+            <nav>
+                <a href="/home">Home</a>
+                <a href="/contact">Contact Us</a>
+                <a href="/about">About Us</a>
+            </nav>
+        </div>
+    
+    </header>
+
+
+    <center>
+
+        <div class="box">	
+            <form action="{{ url_for('predict')}}", method="POST">
+                <span class="text-center">Details</span>
+                <div class="input-container">
+                    <input type="number" id="nitro" name="nitro" required="required"/>
+                    <label for="temp">Nitrogen:</label>
+                </div>
+
+
+                <div class="input-container">
+                    <input type="number" id="phos" name="phos" required="required"/>
+                    <label for="temp">Phosphorus:</label>
+                </div>
+
+
+                <div class="input-container">
+                    <input type="number" id="Potas" name="Potas" required="required"/>
+                    <label for="temp">Potassium:</label>
+                </div>
+        
+            
+        
+             <div class="input-container">
+                <input type="number" id="temp" name="temp" required="required"/>
+                <label for="temp">Temperature:</label>
+            </div>
+            <div class="input-container">   
+                <input type="number" id="humi" name="humi" required="required"/>    
+                <label for="humi">Humidity:</label>
+                
+            </div>   
+            <div class="input-container"> 
+                <input type="number" id="ph" name="ph" required="required"/>
+                <label for="ph">PH Level:</label>
+                    
+            </div>
+            <div class="input-container">
+                <input type="number" id="rain" name="rain" required="required"/>
+                <label for="rain">Rainfall:</label>
+                    
+            </div>                
+            
+                <button id="show" class="btn" type="submit">Predict</button>
+                
+                
+                    <h2>{{ pred }}</h2>
+                  
+                
+            
+        </form>
+        
+    </div>
+    <div class="btn-pos">
+    <button onclick="logout()" class="btn2" id="signOut">Sign Out</button> 
+     </div>
+    
+ 
+        
+        </center>
+        
+
+<br>
+
+
+<div>
+    <div id="part2">
+
+    <div class="card myCard">
+        <div class="myCard-img">
+            <img src="input.svg" alt="">
+        </div>
+        <div class="myCard-title text-blue">Enter details</div>
+        <div class="myCard-body ">Provide information for the crop like its type, the area of the farm, the soil category and the district in which it is to be grown</div>
+    </div>
+    <div class="card myCard">
+        <div class="myCard-img">
+            <img src="imgs/weather.svg" alt=""/>
+        </div>
+        <div class="myCard-title text-green">Live weather Fetch</div>
+        <div class="myCard-body ">Current weather details like the temperature, humidity, and precipitaion are fetched automatically from the internet to be used for prediction</div>
+    </div>
+    <div class="card myCard">
+        <div class="myCard-img">
+            <img src="plant.cvg" alt=""/>
+        </div>
+        <div class="myCard-title text-orange">Prediction</div>
+        <div class="myCard-body ">A Random Forest ML model, trained on past 20 years of data, is used to predict the approximate crop yield</div>
+</div>
+</div>
+
+
+		<footer class="footer-distributed">
+
+			<div class="footer-right">
+
+				<a href=""><i class="fa fa-facebook"></i></a>
+				<a href=""><i class="fa fa-twitter"></i></a>
+				<a href=""><i class="fa fa-linkedin"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a class="link-1" href="http://127.0.0.1:5000/">Home</a>
+					<a href="/about">About</a>
+					<a href="/contact">Contact Us</a>
+				</p>
+
+				<p>Crop Prediction System &copy; 2021</p>
+			</div>
+
+		</footer>
+</body>
+
+           
+
+           <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyDXVW4j8G6Q6_sAb4VQSTlFBxN_cFQyV3M",
+      authDomain: "crop-e67e2.firebaseapp.com",
+      projectId: "crop-e67e2",
+      storageBucket: "crop-e67e2.appspot.com",
+      messagingSenderId: "353060283423",
+      appId: "1:353060283423:web:d38707d7a28fb570fa212a",
+     
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+
+  <script>
+      firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+
+    document.getElementById("user_div").style.display = "block";
+    document.getElementById("login_div").style.display = "none";
+
+    var user = firebase.auth().currentUser;
+
+    if(user != null){
+
+      var email_id = user.email;
+      window.location.assign("/home")
+
+    }
+
+  } else {
+    // No user is signed in.
+
+    document.getElementById("user_div").style.display = "none";
+    document.getElementById("login_div").style.display = "block";
+
+  }
+});
+
+
+
+function logout(){
+  firebase.auth().signOut();
+  window.location.assign("/")
+
+}
+</script>
+</html>

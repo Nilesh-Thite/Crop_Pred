@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+.header-basic {
+	background-color: #292c2f;
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+	padding: 20px 40px;
+	height: 80px;
+	box-sizing: border-box;
+}
+
+.header-basic .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* Logo */
+
+.header-basic .header-limiter h1 {
+	float: left;
+	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-basic .header-limiter h1 span {
+	color: #5383d3;
+}
+
+/* The header links */
+
+.header-basic .header-limiter a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-basic .header-limiter nav{
+	font:16px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+}
+
+.header-basic .header-limiter nav a{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #ffffff;
+	font-size: 16px;
+	opacity: 0.9;
+}
+
+.header-basic .header-limiter nav a:hover{
+	opacity: 1;
+}
+
+.header-basic .header-limiter nav a.selected {
+	color: #608bd2;
+	pointer-events: none;
+	opacity: 1;
+}
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+	.header-basic {
+		padding: 20px 0;
+		height: 75px;
+	}
+
+	.header-basic .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header-basic .header-limiter nav {
+		line-height: 1;
+		float:none;
+	}
+
+	.header-basic .header-limiter nav a {
+		font-size: 13px;
+	}
+
+}
+
+body {
+	margin:0;
+	padding:0;
+}
+
+
+
+/*-----------------------------------------------RESULT CARD--------------------------*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+ @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+ * {
+	 box-sizing: border-box;
+	 margin: 0;
+	 padding: 0;
+}
+ body {
+	 background:url('https://images.unsplash.com/photo-1508615070457-7baeba4003ab?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z3JhZGllbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+   background-repeat: no-repeat;
+   background-size: 120%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+ .blog-card {
+   margin-top: 10px;
+	 width: 350px;
+	 height: 500px;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 margin: -200px 0 0 -175px;
+	 overflow: hidden;
+	 border-radius: 10px;
+	 box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+	 text-align: center;
+   
+}
+ .blog-card.spring-fever {
+	 background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/bg-blog-card.jpg) no-repeat;
+}
+ .blog-card .color-overlay {
+	/* Rectangle 11: */
+	 background: rgba(84, 104, 110, 0.4);
+	 width: 350px;
+	 height: 500px;
+	 position: absolute;
+	 z-index: 10;
+	 top: 0;
+	 left: 0;
+	 transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+ .blog-card .gradient-overlay {
+	/* bg-gradient: */
+	 background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, .6) 21%);
+	 background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, .6) 21%);
+	 background-image: -o-linear-gradient(rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, .6) 21%);
+	 background-image: linear-gradient(rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, .6) 21%);
+	 width: 350px;
+	 height: 500px;
+	 position: absolute;
+	 top: 350px;
+	 left: 0;
+	 z-index: 15;
+}
+ .blog-card:hover .card-info {
+	 opacity: 1;
+	 bottom: 120px;
+}
+ .blog-card:hover .color-overlay {
+	 background: rgba(84, 104, 110, 0.8);
+}
+ .title-content {
+	 text-align: center;
+	 margin: 70px 0 0 0;
+	 position: absolute;
+	 z-index: 20;
+	 width: 100%;
+	 top: 0;
+	 left: 0;
+
+  
+}
+h2{
+  color:yellow;
+  font-size: 20px;
+}
+ h3 {
+	 font-size: 20px;
+	 font-weight: 500;
+	 letter-spacing: 2px;
+	 color: #9cc9e3;
+	 font-family: 'Roboto', sans-serif;
+	 margin-bottom: 0;
+}
+ hr {
+	 width: 50px;
+	 height: 3px;
+	 margin: 20px auto;
+	 border: 0;
+	 background: #d0bb57;
+}
+ .intro {
+	 width: 170px;
+	 margin: 0 auto;
+	 color: #dce3e7;
+	 font-family: 'Droid Serif', serif;
+	 font-size: 13px;
+	 font-style: italic;
+	 line-height: 18px;
+}
+ .card-info {
+	 width: 100%;
+	 position: absolute;
+	 bottom: 100px;
+	 left: 0;
+	 margin: 0 auto;
+	 padding: 0 50px;
+	 color: #dce3e7;
+	 font-family: 'Droid Serif', serif;
+	 font-style: 16px;
+	 line-height: 24px;
+	 z-index: 20;
+	 opacity: 0;
+	 transition: bottom 0.3s, opacity 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+ .utility-info {
+	 position: absolute;
+	 bottom: 0px;
+	 left: 0;
+	 z-index: 20;
+}
+ .utility-list {
+	 list-style-type: none;
+	 margin: 0 0 30px 20px;
+	 padding: 0;
+	 width: 100%;
+}
+ .utility-list li {
+	 margin: 0 15px 0 0;
+	 padding: 0 0 0 22px;
+	 display: inline-block;
+	 color: #dce3e7;
+	 font-family: 'Roboto', sans-serif;
+}
+ .utility-list li.comments {
+	 background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/icon-chat.svg) no-repeat 0 0.1em;
+}
+ .utility-list li.date {
+	 background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/icon-calendar.svg) no-repeat 0 0.1em;
+}
+ 
+/*--------------------------------------CARDS----------------------------*/
+
+#part2 {
+    margin-top: 650px;
+    display:flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.text-blue {
+    color: #5e72e4;
+}
+.text-green {
+    color: #2dce89;
+}
+.text-orange {
+    color: #fb6340;
+}
+#part2 .myCard {
+    background-color:blanchedalmond;
+    margin-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 45px;
+    width: 20em;
+    margin: 3em;
+    min-height: 13em;
+    padding: 1em;
+    border: 10px;
+    border-color: black;
+    filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.15));
+    transition: 0.25s;
+}
+#part2 .myCard:hover {
+    transform: translateY(-10%);
+}
+#part2 .myCard .myCard-img {
+    width: 4em;
+}
+#part2 .myCard .myCard-img img {
+    width: 100%;
+}
+#part2 .myCard .myCard-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+#part2 .myCard .myCard-body {
+    opacity: 0.75;
+}
+
+
+/*------------------------------------Foooter---------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+  font-family: Roboto;
+}
+
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  height: 12vh;
+  margin-top: 10px;
+  position: absolute;
+  text-align: left;
+  font: normal 10px sans-serif;
+  padding: 20px 30px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+/*------------------------------------------Footer---------------------------------------*/
+
+
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>result_html</title>
+</head>
+<body>
+  <header class="header-basic">
+
+    <div class="header-limiter">
+
+        <h1><a href="/home">Crop Prediction System</a></h1>
+
+        <nav>
+            <a href="/home">Home</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/about">About Us</a>
+        </nav>
+    </div>
+
+</header>
+
+
+
+  <div class="blog-card spring-fever">
+    <div class="title-content">
+      <h3>Crop Prediction</h3>
+      <hr />
+      <div class="intro">Hover Over Card To Know The Result</div>
+    </div><!-- /.title-content -->
+    <div class="card-info">
+      <h2>Predicted Crop : <br><h3>{{pred}}</h3></h2><br> 
+    </div><!-- /.card-info -->
+
+
+    <!-- overlays -->
+    <div class="gradient-overlay"></div>
+    <div class="color-overlay"></div>
+  </div><!-- /.blog-card -->
+
+  <br>
+  <div>
+    <div id="part2">
+
+    <div class="card myCard">
+        <div class="myCard-img">
+            <img src="input.svg" alt="">
+        </div>
+        <div class="myCard-title text-blue">Enter details</div>
+        <div class="myCard-body ">Provide information for the crop like its type, the area of the farm, the soil category and the district in which it is to be grown</div>
+    </div>
+    <div class="card myCard">
+        <div class="myCard-img">
+            <img src="imgs/weather.svg" alt=""/>
+        </div>
+        <div class="myCard-title text-green">Live weather Fetch</div>
+        <div class="myCard-body ">Current weather details like the temperature, humidity, and precipitaion are fetched automatically from the internet to be used for prediction</div>
+    </div>
+    <div class="card myCard">
+        <div class="myCard-img">
+            <img src="plant.cvg" alt=""/>
+        </div>
+        <div class="myCard-title text-orange">Prediction</div>
+        <div class="myCard-body ">A Random Forest ML model, trained on past 20 years of data, is used to predict the approximate crop yield</div>
+</div>
+</div>
+
+
+
+
+<br>
+  <footer class="footer-distributed">
+
+    <div class="footer-right">
+
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+
+    </div>
+
+    <div class="footer-left">
+
+      <p class="footer-links">
+        <a class="link-1" href="http://127.0.0.1:5000/">Home</a>
+        <a href="/about">About</a>
+
+        <a href="/contact">Contact Us</a>
+      </p>
+
+      <p>Crop Prediction System &copy; 2021</p>
+    </div>
+
+  </footer>
+
+
+
+
+
+
+
+</body>
+</body>
+</html>
